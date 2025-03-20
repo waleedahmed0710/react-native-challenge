@@ -1,16 +1,14 @@
-import React from 'react';
-import { Provider } from 'react-redux';
-import { PersistGate } from 'redux-persist/integration/react';
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import TaskDetail from "./pages/TaskDetail";
 
-import HomeScreen from './screens/HomeScreen';
-import store, { persistor } from './store';
-
-export default function App() {
+function App() {
   return (
-    <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <HomeScreen />
-      </PersistGate>
-    </Provider>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/task/:id" element={<TaskDetail />} />
+    </Routes>
   );
 }
+
+export default App;

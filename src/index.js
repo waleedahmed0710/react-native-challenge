@@ -1,10 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import { ChakraProvider } from "@chakra-ui/react";
+import { BrowserRouter } from "react-router-dom";
+import { TaskProvider } from "./context/TaskContext";
+import App from "./App";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+ReactDOM.render(
+  <ChakraProvider>
+    <TaskProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </TaskProvider>
+  </ChakraProvider>,
+  document.getElementById("root")
 );
