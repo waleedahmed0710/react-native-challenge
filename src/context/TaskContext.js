@@ -1,19 +1,24 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
 import { taskReducer } from "./TaskReducer";
 
-const API_URL = "https://jsonplaceholder.typicode.com/todos?_limit=10";
+// Mock API for tasks
+const API_URL = "https://jsonplaceholder.typicode.com/todos?_limit=10"; 
 
+// Create a Context to store task-related state and actions
 const TaskContext = createContext();
 
 export const TaskProvider = ({ children }) => {
+  // Initial state setup
   const initialState = {
-    tasks: [],
+    tasks: [],   
     loading: true,
-    error: null
+    error: null 
   };
 
+  // useReducer hook to manage complex state changes with taskReducer
   const [state, dispatch] = useReducer(taskReducer, initialState);
 
+  // Fetch tasks from the API when the component mounts
   useEffect(() => {
     const fetchTasks = async () => {
       try {
@@ -21,9 +26,14 @@ export const TaskProvider = ({ children }) => {
         if (!response.ok) throw new Error("Failed to load tasks. Please try again.");
         
         let data = await response.json();
+        
+        // Ensure tasks have a date property
         data = data.map(task => ({ ...task, date: task.date || null }));
+
+        // Sort tasks: Newest first, tasks without a date are auto set to oldest
         data.sort((a, b) => (!a.date ? 1 : !b.date ? -1 : new Date(b.date) - new Date(a.date)));
 
+        //fetched tasks to the reducer
         dispatch({ type: "FETCH_SUCCESS", payload: data });
       } catch (error) {
         dispatch({ type: "FETCH_ERROR", payload: error.message });
@@ -33,9 +43,12 @@ export const TaskProvider = ({ children }) => {
     fetchTasks();
   }, []);
 
+  // Add a new task
   const addTask = async (task) => {
     try {
-      const newTask = { id: Date.now(), date: new Date().toISOString(), ...task };
+        // Assign a unique ID and current timestamp
+      const newTask = { id: Date.now(), date: new Date().toISOString(), ...task }; 
+       // Update local state
       dispatch({ type: "ADD_TASK", payload: newTask });
 
       await fetch(API_URL, {
@@ -48,19 +61,22 @@ export const TaskProvider = ({ children }) => {
     }
   };
 
+  // Edit an existing task
   const editTask = (id, updatedTask) => {
     dispatch({ type: "EDIT_TASK", payload: { id, ...updatedTask } });
   };
 
+  // Delete a task
   const deleteTask = async (id, navigate) => {
     try {
-      dispatch({ type: "DELETE_TASK", payload: id });
+      dispatch({ type: "DELETE_TASK", payload: id }); // Remove task
 
       const response = await fetch(`${API_URL}/${id}`, { method: "DELETE" });
       if (!response.ok) throw new Error("Failed to delete task. Returning to home...");
     } catch (error) {
       dispatch({ type: "FETCH_ERROR", payload: error.message });
 
+      // Show error message for 5 seconds, then navigate back to Home
       setTimeout(() => {
         dispatch({ type: "FETCH_ERROR", payload: null });
         navigate("/");
@@ -75,4 +91,5 @@ export const TaskProvider = ({ children }) => {
   );
 };
 
+// Custom hook to access the Task Context from any component
 export const useTasks = () => useContext(TaskContext);
