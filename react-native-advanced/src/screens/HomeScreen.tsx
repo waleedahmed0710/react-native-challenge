@@ -1,24 +1,39 @@
-import React, { useEffect } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { FlatList, RefreshControl, View } from 'react-native';
 import { Button, Text } from 'react-native-paper';
-import { useNavigation } from '@react-navigation/native';
-import { useInfiniteQuery } from '@tanstack/react-query';
 import tw from 'tailwind-react-native-classnames';
 import NetInfo from '@react-native-community/netinfo';
-import Toast from 'react-native-toast-message';
-import PostCard from '../components/PostCard';
-import { usePostsStore } from '../store/usePostsStore';
+import { useNavigation, NavigationProp } from '@react-navigation/native'
 
-const fetchPosts = async ({ pageParam = 1 }) => {
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=10&_page=${pageParam}`);
-  if (!res.ok) throw new Error('Failed to fetch');
-  return res.json();
+import PostCard from '../components/PostCard';
+import { usePostStore } from '../store/usePostsStore';
+import { usePaginatedPosts } from '../hooks/usePaginatedPosts';
+import { useSyncOfflineQueue } from '../hooks/useSyncOfflineQueue';
+import NetworkStatusBanner from '../components/NetworkStatusBanner';
+
+type Post = {
+  id: number;
+  title: string;
+  body: string;
+};
+
+type RootStackParamList = {
+  Details: { item: Post };
+  CreatePost: undefined;
 };
 
 const HomeScreen: React.FC = () => {
-  const navigation = useNavigation();
-  const { setPosts, posts } = usePostsStore();
-  const [isOffline, setIsOffline] = React.useState(false);
+  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+  const { posts: offlinePosts } = usePostStore();
+  const [isOffline, setIsOffline] = useState(false);
+
+  const defaultPost =[ {
+    id: 0,
+    title: 'Title',
+    body: 'Body',
+  }] as Post[];
+
+  useSyncOfflineQueue();
 
   const {
     data,
@@ -26,41 +41,28 @@ const HomeScreen: React.FC = () => {
     hasNextPage,
     refetch,
     isFetching,
-    isError,
-  } = useInfiniteQuery({
-    queryKey: ['posts'],
-    queryFn: fetchPosts,
-    getNextPageParam: (lastPage, pages) => (lastPage.length ? pages.length + 1 : undefined),
-    onSuccess: (data) => {
-      const flat = data.pages.flat();
-      setPosts(flat);
-    },
-    onError: () => {
-      Toast.show({
-        type: 'error',
-        text1: 'Failed to fetch posts',
-        text2: 'You are offline or server is unreachable',
-      });
-    },
-  });
+  } = usePaginatedPosts();
 
   useEffect(() => {
-    const unsubscribe = NetInfo.addEventListener(state => {
+    const unsubscribe = NetInfo.addEventListener((state) => {
       setIsOffline(!state.isConnected);
     });
     return () => unsubscribe();
   }, []);
 
-  const displayPosts = data?.pages.flat() || posts;
+  const displayPosts: Post[] = data?.pages.flat() as Post[] || offlinePosts;
+
+  const renderItem = useCallback(
+    ({ item }: { item: Post }) => (
+      <PostCard item={item} onPress={() => navigation.navigate('Details', { item })} />
+    ),
+    [navigation]
+  );
 
   return (
     <View style={tw`flex-1`}>
-      {isOffline && (
-        <View style={tw`bg-red-500 py-2 px-4`}>
-          <Text style={tw`text-white text-center`}>You're Offline</Text>
-        </View>
-      )}
-
+      <NetworkStatusBanner />
+  
       <Button
         mode="contained"
         onPress={() => navigation.navigate('CreatePost')}
@@ -71,17 +73,19 @@ const HomeScreen: React.FC = () => {
 
       <FlatList
         contentContainerStyle={tw`p-4`}
-        data={displayPosts}
-        keyExtractor={(item) => item.id.toString()}
-        renderItem={({ item }) => (
-          <PostCard item={item} onPress={() => navigation.navigate('Details', { item })} />
-        )}
-        onEndReached={hasNextPage ? fetchNextPage : undefined}
+        data={displayPosts ?? defaultPost}
+        keyExtractor={(item: Post) => item.id.toString()}
+        renderItem={renderItem}
+        onEndReached={
+          hasNextPage ? () => fetchNextPage() : undefined
+        }
         onEndReachedThreshold={0.5}
         refreshControl={
           <RefreshControl refreshing={isFetching} onRefresh={refetch} />
         }
-        ListFooterComponent={isFetching ? <Text style={tw`text-center`}>Loading...</Text> : null}
+        ListFooterComponent={
+          isFetching ? <Text style={tw`text-center mt-2`}>Loading...</Text> : null
+        }
       />
     </View>
   );

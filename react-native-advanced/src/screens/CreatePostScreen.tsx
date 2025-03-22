@@ -1,36 +1,60 @@
 import React, { useState } from 'react';
 import { View, TextInput } from 'react-native';
-import { Button, Card, Text } from 'react-native-paper';
-import tw from 'tailwind-react-native-classnames';
-import { useNavigation } from '@react-navigation/native';
 import Toast from 'react-native-toast-message';
-import { usePostActions } from '../store/usePostActions';
+import tw from 'tailwind-react-native-classnames';
+import NetInfo from '@react-native-community/netinfo';
+import { Button, Card, Text } from 'react-native-paper';
+import { useNavigation } from '@react-navigation/native';
+
+import { usePostStore } from '../store/usePostsStore';
+import { createRemotePost } from '../services/posts';
 
 const CreatePostScreen: React.FC = () => {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
-  const { addPost } = usePostActions();
+  const [loading, setLoading] = useState(false);
+  const { addPost } = usePostStore();
   const navigation = useNavigation();
 
-  const handleSave = () => {
+  const handleSave = async () => {
     if (!title.trim() || !body.trim()) {
-      Toast.show({
-        type: 'error',
-        text1: 'Both fields are required',
-      });
+      Toast.show({ type: 'error', text1: 'Both fields are required' });
       return;
     }
-
+  
+    setLoading(true);
+    const net = await NetInfo.fetch();
+  
     const newPost = {
       id: Math.floor(Math.random() * 10000),
       title,
       body,
     };
-
-    addPost(newPost);
-    Toast.show({ type: 'success', text1: 'Post created' });
-    navigation.goBack();
+  
+    if (!net.isConnected) {
+      Toast.show({
+        type: 'info',
+        text1: 'You are offline',
+        text2: 'Post saved locally and will sync later',
+      });
+      addPost({ ...newPost, offline: true });
+      setLoading(false);
+      navigation.goBack();
+      return;
+    }
+  
+    try {
+      await createRemotePost(newPost);
+      addPost(newPost);
+      Toast.show({ type: 'success', text1: 'Post created' });
+      navigation.goBack();
+    } catch {
+      Toast.show({ type: 'error', text1: 'Creation failed' });
+    } finally {
+      setLoading(false);
+    }
   };
+  
 
   return (
     <View style={tw`flex-1 p-4 bg-white`}>
@@ -52,7 +76,7 @@ const CreatePostScreen: React.FC = () => {
           />
         </Card.Content>
       </Card>
-      <Button style={tw`mt-4`} mode="contained" onPress={handleSave}>
+      <Button style={tw`mt-4`} mode="contained" onPress={handleSave} loading={loading} disabled={loading}>
         Save Post
       </Button>
     </View>
@@ -60,3 +84,10 @@ const CreatePostScreen: React.FC = () => {
 };
 
 export default CreatePostScreen;
+function queueOfflineUpdate(newPost: {
+    id: number; // local temp ID
+    title: string; body: string;
+}) {
+    throw new Error('Function not implemented.');
+}
+

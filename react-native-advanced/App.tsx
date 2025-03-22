@@ -1,12 +1,12 @@
 import React from 'react';
+import Toast from 'react-native-toast-message';
+import { queryClient } from './src/services';
+import { QueryClientProvider } from '@tanstack/react-query';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { QueryClientProvider } from '@tanstack/react-query';
-import Toast from 'react-native-toast-message';
 
 import HomeScreen from './src/screens/HomeScreen';
 import DetailsScreen from './src/screens/DetailsScreen';
-import { queryClient } from './src/services/api';
 import CreatePostScreen from './src/screens/CreatePostScreen';
 
 const Stack = createStackNavigator();

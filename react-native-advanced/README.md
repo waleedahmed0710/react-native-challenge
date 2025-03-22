@@ -1,97 +1,108 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# 📱 React Native Advanced Demo App
 
-# Getting Started
+This is a feature-rich React Native application built with scalable architecture, offline persistence, animated UI, and modular state management using modern libraries.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+---
 
-## Step 1: Start Metro
+## ✨ Features
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+- 🔀 Multi-screen navigation with React Navigation
+- ⚙️ Zustand for global state management with `AsyncStorage` persistence
+- 🔄 Infinite scroll & pull-to-refresh via `@tanstack/react-query`
+- 📡 Offline support — view, update, and create posts while offline
+- 🧠 Optimistic updates for create/update actions
+- 💬 Toast feedback using `react-native-toast-message`
+- 🎨 Modern UI via `react-native-paper` + Tailwind styling
+- 🎥 Smooth animations with `react-native-reanimated`
+- 🧪 Typed with TypeScript for type safety
+- ✅ Component-level testing using React Native Testing Library
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+---
 
-```sh
-# Using npm
-npm start
+## 📦 Tech Stack
 
-# OR using Yarn
-yarn start
+| Library                      | Purpose                            |
+|-----------------------------|------------------------------------|
+| React Native                | Cross-platform mobile framework    |
+| TypeScript                  | Type safety                        |
+| Zustand                     | State management                   |
+| AsyncStorage                | Offline data persistence           |
+| React Query                 | API fetching & caching             |
+| React Native Paper          | UI component library               |
+| React Native Toast Message  | Toast notifications                |
+| React Native Reanimated     | Animation engine                   |
+| React Navigation            | Navigation & routing               |
+| Tailwind RN Classnames      | Utility-first styling              |
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repo & install dependencies
+
+```bash
+git clone https://github.com/yourusername/react-native-advanced.git
+cd react-native-advanced
+npm install
+```
+### 2. Run the app
+For Android
+```bash
+npx react-native run-android
+```
+For iOS (macOS only)
+```bash
+npx pod-install
+npx
+react-native run-ios
 ```
 
-## Step 2: Build and run your app
-
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
+## 📁 Folder Structure
+```
+src/
+├── api/               # Fetch functions (e.g., fetchPosts)
+├── components/        # Reusable UI components (e.g., PostCard)
+├── hooks/             # Custom React hooks (e.g., usePaginatedPosts)
+├── screens/           # Screen components (Home, Details, Create)
+├── services/          # QueryClient & network utilities
+├── store/             # Zustand store & actions
 ```
 
-### iOS
+## 🧠 App Functionality
+### ✅ Home Screen
+- Infinite scroll post list from JSONPlaceholder
+- Pull-to-refresh
+- Network status bar
+- Button to create a new post
+- Offline fallback using local storage
+### ✅ Details Screen
+- View full post details
+- Edit and save title/body
+- Offline edits sync later
+- Delete post with confirmation
+### ✅ Create Post Screen
+- Add new post with title/body
+- Offline creation support
+- Shows success/error toasts
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
+## 🧪 Run tests
+```bash
+npm test
 ```
+- __tests__/PostCard.test.tsx
+- Components use testID for querying
 
-Then, and every time you update your native dependencies, run:
+## 📸 Animations
+Implemented via react-native-reanimated:
 
-```sh
-bundle exec pod install
-```
+- FadeInUp on post entry
+- Spring animation on pull-to-refresh bounce
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+## 🧠 State Management
+Using Zustand with persist middleware:
 
-```sh
-# Using npm
-npm run ios
+- Stores post list and offline changes
+- Syncs edits and new posts when back online
 
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+## 📄 License
+MIT
