@@ -1,6 +1,6 @@
 import { Todo } from '../../types/todo';
 
-const fetchApiUrl = process.env.FETCH_API_URL as string;
+const fetchApiUrl = process.env.EXPO_PUBLIC_FETCH_API_URL as string;
 
 export const fetchTodosAPI = async () => {
   if (!fetchApiUrl) {

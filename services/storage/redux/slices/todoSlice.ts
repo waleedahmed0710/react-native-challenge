@@ -69,15 +69,6 @@ export const createTodo = createAsyncThunk(
   },
 );
 
-// // Helper function to clean up deleted todos older than 24 hours
-// const cleanupDeletedTodos = (deletedItems: DeletedTodo[]): DeletedTodo[] => {
-//   // Return empty array if deletedItems is undefined or null
-//   if (!deletedItems) return [];
-
-//   const oneDayAgo = Date.now() - 24 * 60 * 60 * 1000; // 24 hours ago in milliseconds
-//   return deletedItems.filter(item => item.deletedAt > oneDayAgo);
-// };
-
 const todoSlice = createSlice({
   name: 'todos',
   initialState,
@@ -96,9 +87,6 @@ const todoSlice = createSlice({
         });
 
         state.items = state.items.filter(todo => todo.id !== todoId);
-
-        // // Clean up old deleted todos
-        // state.deletedItems = cleanupDeletedTodos(state.deletedItems);
       }
     },
     restoreTodo(state, action: PayloadAction<number>) {
@@ -112,9 +100,6 @@ const todoSlice = createSlice({
         state.deletedItems = state.deletedItems.filter(todo => todo.id !== todoId);
       }
     },
-    // cleanupOldDeletedTodos(state) {
-    //   state.deletedItems = cleanupDeletedTodos(state.deletedItems);
-    // },
   },
   extraReducers: builder => {
     builder
