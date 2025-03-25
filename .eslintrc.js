@@ -29,6 +29,7 @@ module.exports = {
     'react-native/no-raw-text': ['warn', { skip: ['Text'] }],
     'prettier/prettier': 'error',
     '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+    'react-native/no-bridge-components': 'off',
     'react/prop-types': 'off',
   },
   settings: {
