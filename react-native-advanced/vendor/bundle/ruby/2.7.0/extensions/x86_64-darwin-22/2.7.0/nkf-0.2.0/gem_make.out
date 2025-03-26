@@ -1,0 +1,16 @@
+current directory: /Users/mitchellmutandah/clients/react-native-challenge/ReactNativeChallenge/vendor/bundle/ruby/2.7.0/gems/nkf-0.2.0/ext/nkf
+/Users/mitchellmutandah/.rbenv/versions/2.7.5/bin/ruby -I /Users/mitchellmutandah/.rbenv/versions/2.7.5/lib/ruby/2.7.0 -r ./siteconf20250326-1867-60a7xc.rb extconf.rb
+creating Makefile
+
+current directory: /Users/mitchellmutandah/clients/react-native-challenge/ReactNativeChallenge/vendor/bundle/ruby/2.7.0/gems/nkf-0.2.0/ext/nkf
+make "DESTDIR=" clean
+
+current directory: /Users/mitchellmutandah/clients/react-native-challenge/ReactNativeChallenge/vendor/bundle/ruby/2.7.0/gems/nkf-0.2.0/ext/nkf
+make "DESTDIR="
+compiling nkf.c
+linking shared-object nkf.bundle
+ld: warning: -multiply_defined is obsolete
+
+current directory: /Users/mitchellmutandah/clients/react-native-challenge/ReactNativeChallenge/vendor/bundle/ruby/2.7.0/gems/nkf-0.2.0/ext/nkf
+make "DESTDIR=" install
+/usr/local/bin/ginstall -c -m 0755 nkf.bundle ./.gem.20250326-1867-13tii6e
