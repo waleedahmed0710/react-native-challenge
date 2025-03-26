@@ -4,11 +4,11 @@ import COLORS from '@/app/constants/colors';
 const styles = StyleSheet.create({
   activeIndicator: {
     backgroundColor: COLORS.primary,
-    borderBottomRightRadius: 4,
-    borderTopRightRadius: 4,
+    borderBottomLeftRadius: 4,
+    borderTopLeftRadius: 4,
     bottom: 8,
-    left: 0,
     position: 'absolute',
+    right: 0,
     top: 8,
     width: 4,
   },
@@ -46,13 +46,16 @@ const styles = StyleSheet.create({
   },
   drawerContainer: {
     backgroundColor: COLORS.white,
+    bottom: 0,
     elevation: 5,
     height: '100%',
-    marginLeft: 'auto',
+    position: 'absolute',
+    right: 0,
     shadowColor: COLORS.black,
     shadowOffset: { width: -2, height: 0 },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
+    top: 0,
     width: '80%',
   },
   header: {
