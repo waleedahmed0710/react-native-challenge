@@ -17,36 +17,40 @@ import Pagination from '../../components/Pagination';
 import FilterButtons from '../../components/FilterButtons';
 import { DeletedTodo } from '@/services/types/todo';
 import styles from '@/app/styles/home.styles';
+import useTodoData from '@/app/hooks/useTodoData';
 
 export default function Home() {
   const {
     username,
-    isAddModalVisible,
-    setIsAddModalVisible,
-    editedTitle,
-    setEditedTitle,
-    isCompleted,
-    setIsCompleted,
     currentPage,
-    selectedFilter,
-    setSelectedFilter,
-    todos,
-    deletedTodos,
-    isLoading,
-    error,
     filteredTodos,
     totalPages,
     startIndex,
     endIndex,
+    selectedFilter,
+    setSelectedFilter,
+    goToNextPage,
+    goToPrevPage,
+    goToPage,
+  } = useHome();
+
+  const {
+    isAddModalVisible,
+    editedTitle,
+    setEditedTitle,
+    isCompleted,
+    setIsCompleted,
+    todos,
+    deletedTodos,
+    isLoading,
+    error,
     updateLoading,
     handleOptionPress,
     handleUpdateTodo,
     handleDeleteTodo,
     handleRestoreTodo,
-    goToNextPage,
-    goToPrevPage,
-    goToPage,
-  } = useHome();
+    handleModalClose,
+  } = useTodoData();
 
   if (isLoading) {
     return (
@@ -136,7 +140,7 @@ export default function Home() {
 
       <TodoModal
         visible={isAddModalVisible}
-        onClose={() => setIsAddModalVisible(false)}
+        onClose={handleModalClose}
         title={editedTitle}
         onTitleChange={setEditedTitle}
         isCompleted={isCompleted}
