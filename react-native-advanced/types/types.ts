@@ -5,6 +5,7 @@ export type RootStackParamList = {
   PostDetails: { postId: number };
   AddPost: undefined;
   EditPost: { postId: number };
+  Welcome: undefined;
 };
 
 export type Post = {

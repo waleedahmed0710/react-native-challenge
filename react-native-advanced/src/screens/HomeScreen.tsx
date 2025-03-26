@@ -53,7 +53,7 @@ const HomeScreen: React.FC<IPageProps> = ({ navigation }) => {
           <Text style={styles.body} numberOfLines={2}>{item.body}</Text>
         </Card.Content>
         <Card.Actions>
-          <Text style={{ flex: 1, textAlign: 'right', color: '#a28ce0' }}
+          <Text style={{ flex: 1, textAlign: 'right', color: '#6a0dad', fontWeight: 'bold' }}
             onPress={() => handleEditPost(item.id)}> Edit</Text>
         </Card.Actions>
       </Card>
