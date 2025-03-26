@@ -6,7 +6,6 @@ import { defaultSettings } from '../constants/profile';
 
 export default function useProfile() {
   const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
   const [isEditing, setIsEditing] = useState(false);
   const [newUsername, setNewUsername] = useState('');
   const [settings, setSettings] = useState(defaultSettings);
@@ -18,7 +17,6 @@ export default function useProfile() {
         if (userDataString) {
           const userData = JSON.parse(userDataString);
           setUsername(userData.username || 'User');
-          setEmail(userData.email || 'user@example.com');
           setNewUsername(userData.username || 'User');
         }
         const settingsString = await SecureStore.getItemAsync(MENU.USER_SETTINGS_KEY);
@@ -80,7 +78,6 @@ export default function useProfile() {
 
   return {
     username,
-    email,
     isEditing,
     newUsername,
     settings,

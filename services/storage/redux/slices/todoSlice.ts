@@ -161,8 +161,7 @@ const todoSlice = createSlice({
       })
       .addCase(createTodo.fulfilled, (state, action: PayloadAction<Todo>) => {
         state.createLoading = false;
-        // Add the new todo to the items array
-        state.items.push(action.payload);
+        state.items.unshift(action.payload);
       })
       .addCase(createTodo.rejected, (state, action) => {
         state.createLoading = false;

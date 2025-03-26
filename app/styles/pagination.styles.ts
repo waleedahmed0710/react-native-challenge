@@ -17,8 +17,8 @@ const styles = StyleSheet.create({
   },
   ellipsis: {
     color: COLORS.warning,
-    fontSize: 14,
-    marginHorizontal: 4,
+    fontSize: 10,
+    marginHorizontal: 1,
   },
   navigationButton: {
     alignItems: 'center',
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     height: 30,
     justifyContent: 'center',
-    marginHorizontal: 4,
+    marginHorizontal: 1,
     width: 30,
   },
   pageNumberText: {

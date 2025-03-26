@@ -12,7 +12,6 @@ export default function Profile() {
   const insets = useSafeAreaInsets();
   const {
     username,
-    email,
     isEditing,
     newUsername,
     settings,
@@ -49,7 +48,6 @@ export default function Profile() {
               autoFocus
             />
           )}
-          {email && <Text style={styles.email}>{email}</Text>}
         </View>
         <View style={styles.actions}>
           {!isEditing ? (
@@ -84,13 +82,6 @@ export default function Profile() {
             <Text style={styles.infoLabel}>Username:</Text>
             <Text style={styles.infoValue}>{username}</Text>
           </View>
-          {email && (
-            <View style={styles.infoItem}>
-              <Ionicons name="mail-outline" size={20} color={COLORS.gray} />
-              <Text style={styles.infoLabel}>Email:</Text>
-              <Text style={styles.infoValue}>{email}</Text>
-            </View>
-          )}
         </View>
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>Settings</Text>

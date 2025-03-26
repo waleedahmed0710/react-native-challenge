@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { PaginationProps } from '@/app/types/category';
 import styles from '@/app/styles/pagination.styles';
-
+import getPageNumbers from '@/app/utils/pagination';
 export default function Pagination({
   currentPage,
   totalPages,
@@ -13,40 +13,7 @@ export default function Pagination({
   onPrevPage,
   onPageChange,
 }: PaginationProps) {
-  const getPageNumbers = () => {
-    const pageNumbers: number[] = [];
-
-    if (totalPages <= 5) {
-      for (let i = 1; i <= totalPages; i++) {
-        pageNumbers.push(i);
-      }
-    } else {
-      pageNumbers.push(1);
-
-      if (currentPage > 3) {
-        pageNumbers.push(-1);
-      }
-
-      const start = Math.max(2, currentPage - 1);
-      const end = Math.min(totalPages - 1, currentPage + 1);
-
-      for (let i = start; i <= end; i++) {
-        pageNumbers.push(i);
-      }
-
-      if (currentPage < totalPages - 2) {
-        pageNumbers.push(-1);
-      }
-
-      if (totalPages > 1) {
-        pageNumbers.push(totalPages);
-      }
-    }
-
-    return pageNumbers;
-  };
-
-  const pageNumbers = getPageNumbers();
+  const pageNumbers = getPageNumbers(currentPage, totalPages);
 
   return (
     <View style={styles.paginationContainer}>
