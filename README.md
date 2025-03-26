@@ -11,9 +11,8 @@ This is a todo list application that displays a list from a server, but also all
 ## Thoughts
 
 - I couldn't add all the functionality I would have wanted I just didn't have the time, actually I just might have over did it a bit.
-- It was my first using expo usually I setup the app raw will all the ios and android configurations. there were almost no build errors which was amazing, considering what I usually work with.
+- It was my first time using expo usually I setup the app raw will all the ios and android configurations. there were almost no build errors which was amazing, considering what I usually work with.
 - It was a great experience for me personally, I think I forget I was actually doing this for a job at one point, and I really enjoyed the work.
-- I should've add some snapshot tests
 
 ## Get started
 
@@ -46,8 +45,9 @@ This is a todo list application that displays a list from a server, but also all
 In the output, you'll find options to open the app in a
 
 - [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
+- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/) - with/without expo
 - [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
 - [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
 I recommend Expo Go - it is the easiest way to run the application (I used android studio because I work with android studio, but Expo is much simpler and faster)
+PS: it is not always realibly - if you run into such problem please try the other options available(Android emulator, ios emulator)
