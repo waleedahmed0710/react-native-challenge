@@ -1,0 +1,217 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DeletedTodoItem Component renders completed deleted todo correctly 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#FFFFFF",
+      "borderRadius": 10,
+      "elevation": 2,
+      "flexDirection": "row",
+      "marginBottom": 10,
+      "padding": 16,
+      "shadowColor": "#000000",
+      "shadowOffset": {
+        "height": 1,
+        "width": 0,
+      },
+      "shadowOpacity": 0.1,
+      "shadowRadius": 2,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "marginRight": 10,
+      }
+    }
+  >
+    <Ionicons
+      color="#666666"
+      name="checkmark-circle"
+      size={24}
+    />
+  </View>
+  <Text
+    style={
+      [
+        {
+          "flex": 1,
+          "fontSize": 16,
+        },
+        {
+          "color": "#666666",
+          "fontStyle": "italic",
+          "textDecorationLine": "line-through",
+        },
+      ]
+    }
+  >
+    Completed Deleted Todo Item
+  </Text>
+  <Text
+    style={
+      {
+        "color": "#ECAC05",
+        "fontSize": 12,
+        "marginLeft": 10,
+      }
+    }
+  >
+    #
+    1
+  </Text>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "marginLeft": 5,
+        "opacity": 1,
+        "padding": 8,
+      }
+    }
+  >
+    <Ionicons
+      color="#c55501"
+      name="refresh"
+      size={20}
+    />
+  </View>
+</View>
+`;
+
+exports[`DeletedTodoItem Component renders incomplete deleted todo correctly 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#FFFFFF",
+      "borderRadius": 10,
+      "elevation": 2,
+      "flexDirection": "row",
+      "marginBottom": 10,
+      "padding": 16,
+      "shadowColor": "#000000",
+      "shadowOffset": {
+        "height": 1,
+        "width": 0,
+      },
+      "shadowOpacity": 0.1,
+      "shadowRadius": 2,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "marginRight": 10,
+      }
+    }
+  >
+    <Ionicons
+      color="#666666"
+      name="ellipse-outline"
+      size={24}
+    />
+  </View>
+  <Text
+    style={
+      [
+        {
+          "flex": 1,
+          "fontSize": 16,
+        },
+        {
+          "color": "#666666",
+          "fontStyle": "italic",
+          "textDecorationLine": "line-through",
+        },
+      ]
+    }
+  >
+    Incomplete Deleted Todo Item
+  </Text>
+  <Text
+    style={
+      {
+        "color": "#ECAC05",
+        "fontSize": 12,
+        "marginLeft": 10,
+      }
+    }
+  >
+    #
+    2
+  </Text>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "marginLeft": 5,
+        "opacity": 1,
+        "padding": 8,
+      }
+    }
+  >
+    <Ionicons
+      color="#c55501"
+      name="refresh"
+      size={20}
+    />
+  </View>
+</View>
+`;

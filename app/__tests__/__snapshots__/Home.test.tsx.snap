@@ -1,0 +1,195 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Component renders correctly 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    [
+      {
+        "backgroundColor": "#FFFFFF",
+        "flex": 1,
+      },
+      {
+        "paddingBottom": 0,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      {
+        "flex": 1,
+        "padding": 20,
+        "paddingTop": 60,
+      }
+    }
+  >
+    <StatusBar
+      style="dark"
+    />
+    <View
+      style={
+        {
+          "alignItems": "flex-start",
+          "flexDirection": "column",
+          "justifyContent": "center",
+          "marginBottom": 16,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "#c55501",
+            "fontSize": 22,
+            "fontWeight": "600",
+            "marginTop": 10,
+            "textAlign": "right",
+          }
+        }
+      >
+        Test User
+        's List
+      </Text>
+      <Text
+        style={
+          {
+            "color": "#ECAC05",
+            "fontSize": 14,
+            "marginTop": 4,
+            "textAlign": "right",
+          }
+        }
+      >
+        All todos
+         
+        • Page 
+        1
+         of 
+        1
+      </Text>
+    </View>
+    <FilterButtons
+      completedTodos={1}
+      deletedTodos={0}
+      onFilterChange={[MockFunction]}
+      selectedFilter="all"
+      totalTodos={2}
+    />
+    <View
+      style={
+        {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 12,
+          "elevation": 2,
+          "flex": 1,
+          "overflow": "hidden",
+          "position": "relative",
+          "shadowColor": "#000000",
+          "shadowOffset": {
+            "height": 1,
+            "width": 0,
+          },
+          "shadowOpacity": 0.1,
+          "shadowRadius": 2,
+        }
+      }
+    >
+      <RCTScrollView
+        contentContainerStyle={
+          {
+            "paddingBottom": 70,
+            "paddingVertical": 10,
+          }
+        }
+        data={
+          [
+            {
+              "completed": false,
+              "id": 1,
+              "title": "Test Todo 1",
+              "userId": 1,
+            },
+            {
+              "completed": true,
+              "id": 2,
+              "title": "Test Todo 2",
+              "userId": 1,
+            },
+          ]
+        }
+        getItem={[Function]}
+        getItemCount={[Function]}
+        keyExtractor={[Function]}
+        onContentSizeChange={[Function]}
+        onLayout={[Function]}
+        onMomentumScrollBegin={[Function]}
+        onMomentumScrollEnd={[Function]}
+        onScroll={[Function]}
+        onScrollBeginDrag={[Function]}
+        onScrollEndDrag={[Function]}
+        removeClippedSubviews={false}
+        renderItem={[Function]}
+        scrollEventThrottle={0.0001}
+        showsVerticalScrollIndicator={false}
+        stickyHeaderIndices={[]}
+        style={
+          {
+            "backgroundColor": "transparent",
+            "flex": 1,
+          }
+        }
+        viewabilityConfigCallbackPairs={[]}
+      >
+        <View>
+          <View
+            onFocusCapture={[Function]}
+            onLayout={[Function]}
+            style={null}
+          >
+            <TodoItem
+              onOptionPress={[MockFunction]}
+              todo={
+                {
+                  "completed": false,
+                  "id": 1,
+                  "title": "Test Todo 1",
+                  "userId": 1,
+                }
+              }
+            />
+          </View>
+          <View
+            onFocusCapture={[Function]}
+            onLayout={[Function]}
+            style={null}
+          >
+            <TodoItem
+              onOptionPress={[MockFunction]}
+              todo={
+                {
+                  "completed": true,
+                  "id": 2,
+                  "title": "Test Todo 2",
+                  "userId": 1,
+                }
+              }
+            />
+          </View>
+        </View>
+      </RCTScrollView>
+    </View>
+  </View>
+  <TodoModal
+    isCompleted={false}
+    onClose={[MockFunction]}
+    onCompletedChange={[MockFunction]}
+    onDelete={[MockFunction]}
+    onTitleChange={[MockFunction]}
+    onUpdate={[MockFunction]}
+    title=""
+    updateLoading={false}
+    visible={false}
+  />
+</View>
+`;
