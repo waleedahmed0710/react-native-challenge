@@ -1,0 +1,1227 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile Component renders editing state correctly 1`] = `
+<View
+  style={
+    {
+      "backgroundColor": "#FFFFFF",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      [
+        {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "borderBottomColor": "#f0f0f0",
+          "borderBottomWidth": 1,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "paddingBottom": 12,
+          "paddingHorizontal": 16,
+          "zIndex": 10,
+        },
+        {
+          "paddingTop": 20,
+        },
+      ]
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "opacity": 1,
+          "padding": 8,
+        }
+      }
+    >
+      <Ionicons
+        color="#c55501"
+        name="arrow-back"
+        size={24}
+      />
+    </View>
+    <Text
+      style={
+        {
+          "fontSize": 20,
+          "fontWeight": "600",
+        }
+      }
+    >
+      Profile
+    </Text>
+    <View
+      style={
+        {
+          "width": 40,
+        }
+      }
+    />
+  </View>
+  <RCTScrollView
+    style={
+      {
+        "flex": 1,
+        "paddingBottom": 30,
+        "paddingHorizontal": 20,
+        "paddingTop": 10,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "marginBottom": 32,
+            "marginTop": 24,
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "backgroundColor": "#c55501",
+              "borderRadius": 50,
+              "height": 100,
+              "justifyContent": "center",
+              "marginBottom": 16,
+              "width": 100,
+            }
+          }
+        >
+          <Text
+            style={
+              {
+                "color": "#FFFFFF",
+                "fontSize": 40,
+                "fontWeight": "bold",
+              }
+            }
+          >
+            T
+          </Text>
+        </View>
+        <TextInput
+          autoFocus={true}
+          onChangeText={[MockFunction]}
+          placeholder="Enter username"
+          style={
+            {
+              "borderBottomColor": "#c55501",
+              "borderBottomWidth": 1,
+              "fontSize": 24,
+              "fontWeight": "bold",
+              "marginBottom": 4,
+              "paddingHorizontal": 8,
+              "paddingVertical": 4,
+              "textAlign": "center",
+            }
+          }
+          value="EditedUser"
+        />
+        <Text
+          style={
+            {
+              "color": "#ecac05",
+              "fontSize": 16,
+            }
+          }
+        >
+          test@example.com
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "marginBottom": 36,
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "width": "100%",
+            }
+          }
+        >
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "alignItems": "center",
+                "backgroundColor": "#f0f0f0",
+                "borderRadius": 20,
+                "marginHorizontal": 8,
+                "minWidth": 100,
+                "opacity": 1,
+                "paddingHorizontal": 20,
+                "paddingVertical": 10,
+              }
+            }
+          >
+            <Text
+              style={
+                {
+                  "color": "#000000",
+                  "fontWeight": "600",
+                }
+              }
+            >
+              Cancel
+            </Text>
+          </View>
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "alignItems": "center",
+                "backgroundColor": "#c55501",
+                "borderRadius": 20,
+                "marginHorizontal": 8,
+                "minWidth": 100,
+                "opacity": 1,
+                "paddingHorizontal": 20,
+                "paddingVertical": 10,
+              }
+            }
+          >
+            <Text
+              style={
+                {
+                  "color": "#FFFFFF",
+                  "fontWeight": "600",
+                }
+              }
+            >
+              Save
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          {
+            "backgroundColor": "#f0f0f0",
+            "borderRadius": 12,
+            "marginBottom": 24,
+            "padding": 20,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#c55501",
+              "fontSize": 18,
+              "fontWeight": "600",
+              "marginBottom": 16,
+            }
+          }
+        >
+          Account Information
+        </Text>
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "marginBottom": 12,
+            }
+          }
+        >
+          <Ionicons
+            color="#666666"
+            name="person-outline"
+            size={20}
+          />
+          <Text
+            style={
+              {
+                "fontSize": 16,
+                "fontWeight": "500",
+                "marginLeft": 8,
+                "marginRight": 4,
+              }
+            }
+          >
+            Username:
+          </Text>
+          <Text
+            style={
+              {
+                "color": "#ecac05",
+                "fontSize": 16,
+              }
+            }
+          >
+            TestUser
+          </Text>
+        </View>
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "marginBottom": 12,
+            }
+          }
+        >
+          <Ionicons
+            color="#666666"
+            name="mail-outline"
+            size={20}
+          />
+          <Text
+            style={
+              {
+                "fontSize": 16,
+                "fontWeight": "500",
+                "marginLeft": 8,
+                "marginRight": 4,
+              }
+            }
+          >
+            Email:
+          </Text>
+          <Text
+            style={
+              {
+                "color": "#ecac05",
+                "fontSize": 16,
+              }
+            }
+          >
+            test@example.com
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          {
+            "backgroundColor": "#f0f0f0",
+            "borderRadius": 12,
+            "marginBottom": 24,
+            "padding": 20,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#c55501",
+              "fontSize": 18,
+              "fontWeight": "600",
+              "marginBottom": 16,
+            }
+          }
+        >
+          Settings
+        </Text>
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "borderBottomColor": "#eee",
+              "borderBottomWidth": 1,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingVertical": 12,
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Ionicons
+              color="#666666"
+              name="trash-outline"
+              size={20}
+            />
+            <Text
+              style={
+                {
+                  "fontSize": 16,
+                  "marginLeft": 12,
+                }
+              }
+            >
+              Auto Delete Completed Tasks
+            </Text>
+          </View>
+          <RCTSwitch
+            accessibilityRole="switch"
+            onChange={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            onTintColor="#ecac05"
+            style={
+              [
+                {
+                  "height": 31,
+                  "width": 51,
+                },
+                {
+                  "backgroundColor": "#d0d0d0",
+                  "borderRadius": 16,
+                },
+              ]
+            }
+            thumbTintColor="#f4f3f4"
+            tintColor="#d0d0d0"
+            value={false}
+          />
+        </View>
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "borderBottomColor": "#eee",
+              "borderBottomWidth": 1,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingVertical": 12,
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Ionicons
+              color="#666666"
+              name="list-outline"
+              size={20}
+            />
+            <Text
+              style={
+                {
+                  "fontSize": 16,
+                  "marginLeft": 12,
+                }
+              }
+            >
+              Compact View
+            </Text>
+          </View>
+          <RCTSwitch
+            accessibilityRole="switch"
+            onChange={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            onTintColor="#ecac05"
+            style={
+              [
+                {
+                  "height": 31,
+                  "width": 51,
+                },
+                {
+                  "backgroundColor": "#d0d0d0",
+                  "borderRadius": 16,
+                },
+              ]
+            }
+            thumbTintColor="#f4f3f4"
+            tintColor="#d0d0d0"
+            value={false}
+          />
+        </View>
+      </View>
+      <View
+        style={
+          {
+            "backgroundColor": "#f0f0f0",
+            "borderRadius": 12,
+            "marginBottom": 24,
+            "padding": 20,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#c55501",
+              "fontSize": 18,
+              "fontWeight": "600",
+              "marginBottom": 16,
+            }
+          }
+        >
+          App Information
+        </Text>
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "marginBottom": 12,
+            }
+          }
+        >
+          <Ionicons
+            color="#666666"
+            name="information-circle-outline"
+            size={20}
+          />
+          <Text
+            style={
+              {
+                "fontSize": 16,
+                "fontWeight": "500",
+                "marginLeft": 8,
+                "marginRight": 4,
+              }
+            }
+          >
+            Version:
+          </Text>
+          <Text
+            style={
+              {
+                "color": "#ecac05",
+                "fontSize": 16,
+              }
+            }
+          >
+            1.0.0
+          </Text>
+        </View>
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "alignItems": "center",
+              "borderBottomColor": "#eee",
+              "borderBottomWidth": 1,
+              "flexDirection": "row",
+              "opacity": 1,
+              "paddingVertical": 12,
+            }
+          }
+        >
+          <Ionicons
+            color="#ff3b30"
+            name="log-out-outline"
+            size={20}
+          />
+          <Text
+            style={
+              {
+                "color": "#ff3b30",
+                "fontSize": 16,
+                "fontWeight": "500",
+                "marginLeft": 12,
+              }
+            }
+          >
+            Sign Out
+          </Text>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
+
+exports[`Profile Component renders normal state correctly 1`] = `
+<View
+  style={
+    {
+      "backgroundColor": "#FFFFFF",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      [
+        {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "borderBottomColor": "#f0f0f0",
+          "borderBottomWidth": 1,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "paddingBottom": 12,
+          "paddingHorizontal": 16,
+          "zIndex": 10,
+        },
+        {
+          "paddingTop": 20,
+        },
+      ]
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "opacity": 1,
+          "padding": 8,
+        }
+      }
+    >
+      <Ionicons
+        color="#c55501"
+        name="arrow-back"
+        size={24}
+      />
+    </View>
+    <Text
+      style={
+        {
+          "fontSize": 20,
+          "fontWeight": "600",
+        }
+      }
+    >
+      Profile
+    </Text>
+    <View
+      style={
+        {
+          "width": 40,
+        }
+      }
+    />
+  </View>
+  <RCTScrollView
+    style={
+      {
+        "flex": 1,
+        "paddingBottom": 30,
+        "paddingHorizontal": 20,
+        "paddingTop": 10,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "marginBottom": 32,
+            "marginTop": 24,
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "backgroundColor": "#c55501",
+              "borderRadius": 50,
+              "height": 100,
+              "justifyContent": "center",
+              "marginBottom": 16,
+              "width": 100,
+            }
+          }
+        >
+          <Text
+            style={
+              {
+                "color": "#FFFFFF",
+                "fontSize": 40,
+                "fontWeight": "bold",
+              }
+            }
+          >
+            T
+          </Text>
+        </View>
+        <Text
+          style={
+            {
+              "fontSize": 24,
+              "fontWeight": "bold",
+              "marginBottom": 4,
+            }
+          }
+        >
+          TestUser
+        </Text>
+        <Text
+          style={
+            {
+              "color": "#ecac05",
+              "fontSize": 16,
+            }
+          }
+        >
+          test@example.com
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "marginBottom": 36,
+          }
+        }
+      >
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "alignItems": "center",
+              "backgroundColor": "#c55501",
+              "borderRadius": 20,
+              "flexDirection": "row",
+              "opacity": 1,
+              "paddingHorizontal": 20,
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Ionicons
+            color="#FFFFFF"
+            name="pencil"
+            size={20}
+          />
+          <Text
+            style={
+              {
+                "color": "#FFFFFF",
+                "fontWeight": "600",
+                "marginLeft": 8,
+              }
+            }
+          >
+            Edit Profile
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          {
+            "backgroundColor": "#f0f0f0",
+            "borderRadius": 12,
+            "marginBottom": 24,
+            "padding": 20,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#c55501",
+              "fontSize": 18,
+              "fontWeight": "600",
+              "marginBottom": 16,
+            }
+          }
+        >
+          Account Information
+        </Text>
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "marginBottom": 12,
+            }
+          }
+        >
+          <Ionicons
+            color="#666666"
+            name="person-outline"
+            size={20}
+          />
+          <Text
+            style={
+              {
+                "fontSize": 16,
+                "fontWeight": "500",
+                "marginLeft": 8,
+                "marginRight": 4,
+              }
+            }
+          >
+            Username:
+          </Text>
+          <Text
+            style={
+              {
+                "color": "#ecac05",
+                "fontSize": 16,
+              }
+            }
+          >
+            TestUser
+          </Text>
+        </View>
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "marginBottom": 12,
+            }
+          }
+        >
+          <Ionicons
+            color="#666666"
+            name="mail-outline"
+            size={20}
+          />
+          <Text
+            style={
+              {
+                "fontSize": 16,
+                "fontWeight": "500",
+                "marginLeft": 8,
+                "marginRight": 4,
+              }
+            }
+          >
+            Email:
+          </Text>
+          <Text
+            style={
+              {
+                "color": "#ecac05",
+                "fontSize": 16,
+              }
+            }
+          >
+            test@example.com
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          {
+            "backgroundColor": "#f0f0f0",
+            "borderRadius": 12,
+            "marginBottom": 24,
+            "padding": 20,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#c55501",
+              "fontSize": 18,
+              "fontWeight": "600",
+              "marginBottom": 16,
+            }
+          }
+        >
+          Settings
+        </Text>
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "borderBottomColor": "#eee",
+              "borderBottomWidth": 1,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingVertical": 12,
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Ionicons
+              color="#666666"
+              name="trash-outline"
+              size={20}
+            />
+            <Text
+              style={
+                {
+                  "fontSize": 16,
+                  "marginLeft": 12,
+                }
+              }
+            >
+              Auto Delete Completed Tasks
+            </Text>
+          </View>
+          <RCTSwitch
+            accessibilityRole="switch"
+            onChange={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            onTintColor="#ecac05"
+            style={
+              [
+                {
+                  "height": 31,
+                  "width": 51,
+                },
+                {
+                  "backgroundColor": "#d0d0d0",
+                  "borderRadius": 16,
+                },
+              ]
+            }
+            thumbTintColor="#f4f3f4"
+            tintColor="#d0d0d0"
+            value={false}
+          />
+        </View>
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "borderBottomColor": "#eee",
+              "borderBottomWidth": 1,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingVertical": 12,
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Ionicons
+              color="#666666"
+              name="list-outline"
+              size={20}
+            />
+            <Text
+              style={
+                {
+                  "fontSize": 16,
+                  "marginLeft": 12,
+                }
+              }
+            >
+              Compact View
+            </Text>
+          </View>
+          <RCTSwitch
+            accessibilityRole="switch"
+            onChange={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            onTintColor="#ecac05"
+            style={
+              [
+                {
+                  "height": 31,
+                  "width": 51,
+                },
+                {
+                  "backgroundColor": "#d0d0d0",
+                  "borderRadius": 16,
+                },
+              ]
+            }
+            thumbTintColor="#f4f3f4"
+            tintColor="#d0d0d0"
+            value={false}
+          />
+        </View>
+      </View>
+      <View
+        style={
+          {
+            "backgroundColor": "#f0f0f0",
+            "borderRadius": 12,
+            "marginBottom": 24,
+            "padding": 20,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#c55501",
+              "fontSize": 18,
+              "fontWeight": "600",
+              "marginBottom": 16,
+            }
+          }
+        >
+          App Information
+        </Text>
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "marginBottom": 12,
+            }
+          }
+        >
+          <Ionicons
+            color="#666666"
+            name="information-circle-outline"
+            size={20}
+          />
+          <Text
+            style={
+              {
+                "fontSize": 16,
+                "fontWeight": "500",
+                "marginLeft": 8,
+                "marginRight": 4,
+              }
+            }
+          >
+            Version:
+          </Text>
+          <Text
+            style={
+              {
+                "color": "#ecac05",
+                "fontSize": 16,
+              }
+            }
+          >
+            1.0.0
+          </Text>
+        </View>
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "alignItems": "center",
+              "borderBottomColor": "#eee",
+              "borderBottomWidth": 1,
+              "flexDirection": "row",
+              "opacity": 1,
+              "paddingVertical": 12,
+            }
+          }
+        >
+          <Ionicons
+            color="#ff3b30"
+            name="log-out-outline"
+            size={20}
+          />
+          <Text
+            style={
+              {
+                "color": "#ff3b30",
+                "fontSize": 16,
+                "fontWeight": "500",
+                "marginLeft": 12,
+              }
+            }
+          >
+            Sign Out
+          </Text>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

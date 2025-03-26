@@ -1,0 +1,611 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Categories Component renders correctly 1`] = `
+<View
+  style={
+    {
+      "backgroundColor": "#FFFFFF",
+      "flex": 1,
+      "padding": 20,
+      "paddingTop": 60,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "marginBottom": 10,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "color": "#c55501",
+          "fontSize": 28,
+          "fontWeight": "bold",
+          "marginTop": 10,
+        }
+      }
+    >
+      Categories
+    </Text>
+  </View>
+  <Text
+    style={
+      {
+        "color": "#ecac05",
+        "fontSize": 14,
+        "marginBottom": 20,
+        "marginTop": 10,
+      }
+    }
+  >
+    Organize your tasks into categories to stay focused and productive
+  </Text>
+  <RCTScrollView
+    contentContainerStyle={
+      {
+        "paddingBottom": 20,
+      }
+    }
+    data={
+      [
+        {
+          "color": "#4285F4",
+          "count": 3,
+          "id": "1",
+          "name": "Work",
+        },
+        {
+          "color": "#EA4335",
+          "count": 5,
+          "id": "2",
+          "name": "Personal",
+        },
+        {
+          "color": "#FBBC05",
+          "count": 2,
+          "id": "3",
+          "name": "Shopping",
+        },
+      ]
+    }
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={0.0001}
+    showsVerticalScrollIndicator={false}
+    stickyHeaderIndices={[]}
+    viewabilityConfigCallbackPairs={[]}
+  >
+    <View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={null}
+      >
+        <CategoryItem
+          category={
+            {
+              "color": "#4285F4",
+              "count": 3,
+              "id": "1",
+              "name": "Work",
+            }
+          }
+          onDelete={[MockFunction]}
+          onEdit={[MockFunction]}
+          onPress={[MockFunction]}
+        />
+      </View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={null}
+      >
+        <CategoryItem
+          category={
+            {
+              "color": "#EA4335",
+              "count": 5,
+              "id": "2",
+              "name": "Personal",
+            }
+          }
+          onDelete={[MockFunction]}
+          onEdit={[MockFunction]}
+          onPress={[MockFunction]}
+        />
+      </View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={null}
+      >
+        <CategoryItem
+          category={
+            {
+              "color": "#FBBC05",
+              "count": 2,
+              "id": "3",
+              "name": "Shopping",
+            }
+          }
+          onDelete={[MockFunction]}
+          onEdit={[MockFunction]}
+          onPress={[MockFunction]}
+        />
+      </View>
+    </View>
+  </RCTScrollView>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "alignSelf": "flex-end",
+        "backgroundColor": "#c55501",
+        "borderRadius": 30,
+        "bottom": 10,
+        "elevation": 5,
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "left": 10,
+        "opacity": 1,
+        "padding": 15,
+        "position": "absolute",
+        "shadowColor": "#000000",
+        "shadowOffset": {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 0.3,
+        "shadowRadius": 3,
+      }
+    }
+  >
+    <Ionicons
+      color="#FFFFFF"
+      name="shuffle"
+      size={20}
+    />
+  </View>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "alignSelf": "flex-end",
+        "backgroundColor": "#c55501",
+        "borderRadius": 30,
+        "bottom": 10,
+        "elevation": 5,
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "opacity": 1,
+        "padding": 15,
+        "position": "absolute",
+        "right": 10,
+        "shadowColor": "#000000",
+        "shadowOffset": {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 0.3,
+        "shadowRadius": 3,
+      }
+    }
+  >
+    <Ionicons
+      color="#FFFFFF"
+      name="add"
+      size={24}
+    />
+  </View>
+  <CategoryModal
+    categoryColor="#4285F4"
+    categoryName=""
+    colorOptions={
+      [
+        "#4285F4",
+        "#EA4335",
+        "#FBBC05",
+        "#34A853",
+        "#8E44AD",
+        "#FF5722",
+        "#009688",
+        "#F44336",
+        "#9C27B0",
+        "#2196F3",
+      ]
+    }
+    editingCategory={null}
+    onCategoryColorChange={[MockFunction]}
+    onCategoryNameChange={[MockFunction]}
+    onClose={[MockFunction]}
+    onSave={[MockFunction]}
+    visible={false}
+  />
+  <CategoryTodosModal
+    category={null}
+    onClose={[MockFunction]}
+    onToggleTodo={[MockFunction]}
+    todos={[]}
+    visible={false}
+  />
+</View>
+`;
+
+exports[`Categories Component renders empty state correctly 1`] = `
+<View
+  style={
+    {
+      "backgroundColor": "#FFFFFF",
+      "flex": 1,
+      "padding": 20,
+      "paddingTop": 60,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "marginBottom": 10,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "color": "#c55501",
+          "fontSize": 28,
+          "fontWeight": "bold",
+          "marginTop": 10,
+        }
+      }
+    >
+      Categories
+    </Text>
+  </View>
+  <Text
+    style={
+      {
+        "color": "#ecac05",
+        "fontSize": 14,
+        "marginBottom": 20,
+        "marginTop": 10,
+      }
+    }
+  >
+    Organize your tasks into categories to stay focused and productive
+  </Text>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+        "marginTop": 50,
+      }
+    }
+  >
+    <Ionicons
+      color="#666666"
+      name="folder-open-outline"
+      size={64}
+    />
+    <Text
+      style={
+        {
+          "color": "#666666",
+          "fontSize": 16,
+          "marginBottom": 24,
+          "marginTop": 12,
+        }
+      }
+    >
+      No categories yet
+    </Text>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "backgroundColor": "#c55501",
+          "borderRadius": 8,
+          "opacity": 1,
+          "paddingHorizontal": 24,
+          "paddingVertical": 12,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "#FFFFFF",
+            "fontSize": 16,
+            "fontWeight": "500",
+          }
+        }
+      >
+        Create your first category
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "alignSelf": "flex-end",
+        "backgroundColor": "#c55501",
+        "borderRadius": 30,
+        "bottom": 10,
+        "elevation": 5,
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "left": 10,
+        "opacity": 1,
+        "padding": 15,
+        "position": "absolute",
+        "shadowColor": "#000000",
+        "shadowOffset": {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 0.3,
+        "shadowRadius": 3,
+      }
+    }
+  >
+    <Ionicons
+      color="#FFFFFF"
+      name="shuffle"
+      size={20}
+    />
+  </View>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "alignSelf": "flex-end",
+        "backgroundColor": "#c55501",
+        "borderRadius": 30,
+        "bottom": 10,
+        "elevation": 5,
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "opacity": 1,
+        "padding": 15,
+        "position": "absolute",
+        "right": 10,
+        "shadowColor": "#000000",
+        "shadowOffset": {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 0.3,
+        "shadowRadius": 3,
+      }
+    }
+  >
+    <Ionicons
+      color="#FFFFFF"
+      name="add"
+      size={24}
+    />
+  </View>
+  <CategoryModal
+    categoryColor="#4285F4"
+    categoryName=""
+    colorOptions={
+      [
+        "#4285F4",
+        "#EA4335",
+        "#FBBC05",
+        "#34A853",
+        "#8E44AD",
+        "#FF5722",
+        "#009688",
+        "#F44336",
+        "#9C27B0",
+        "#2196F3",
+      ]
+    }
+    editingCategory={null}
+    onCategoryColorChange={[MockFunction]}
+    onCategoryNameChange={[MockFunction]}
+    onClose={[MockFunction]}
+    onSave={[MockFunction]}
+    visible={false}
+  />
+  <CategoryTodosModal
+    category={null}
+    onClose={[MockFunction]}
+    onToggleTodo={[MockFunction]}
+    todos={[]}
+    visible={false}
+  />
+</View>
+`;
+
+exports[`Categories Component renders loading state correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "backgroundColor": "#FFFFFF",
+        "flex": 1,
+        "padding": 20,
+        "paddingTop": 60,
+      },
+      {
+        "alignItems": "center",
+        "justifyContent": "center",
+      },
+    ]
+  }
+>
+  <ActivityIndicator
+    color="#c55501"
+    size="large"
+  />
+  <Text
+    style={
+      {
+        "color": "#666666",
+        "fontSize": 16,
+        "marginTop": 10,
+      }
+    }
+  >
+    Loading categories...
+  </Text>
+</View>
+`;
