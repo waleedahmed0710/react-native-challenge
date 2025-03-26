@@ -25,13 +25,29 @@
     "RCT-Folly/Fabric": [
       "2024.11.18.00"
     ],
-    "React-jsitracing": [],
-    "React-jsi": [],
-    "React-utils": [],
-    "React-RuntimeCore": [],
-    "React-featureflags": [],
-    "React-jsinspector": [],
-    "React-hermes": [],
-    "hermes-engine": []
+    "React-jsitracing": [
+
+    ],
+    "React-jsi": [
+
+    ],
+    "React-utils": [
+
+    ],
+    "React-RuntimeCore": [
+
+    ],
+    "React-featureflags": [
+
+    ],
+    "React-jsinspector": [
+
+    ],
+    "React-hermes": [
+
+    ],
+    "hermes-engine": [
+
+    ]
   }
 }
