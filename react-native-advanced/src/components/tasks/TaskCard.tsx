@@ -169,5 +169,3 @@ const styles = StyleSheet.create({
     backgroundColor: "#B00020",
   },
 })
-
-r
