@@ -1,0 +1,103 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Complete project proposal",
+      "description": "Finish the draft and send it to the team for review",
+      "categoryId": "1",
+      "status": "In Progress",
+      "priority": "High",
+      "dueDate": "2025-03-27T00:00:00.000Z",
+      "createdAt": "2025-03-25T00:00:00.000Z",
+      "updatedAt": "2025-03-26T00:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "title": "Grocery shopping",
+      "description": "Buy fruits, vegetables, and other essentials",
+      "categoryId": "2",
+      "status": "To Do",
+      "priority": "Medium",
+      "dueDate": "2025-03-27T00:00:00.000Z",
+      "createdAt": "2025-03-25T00:00:00.000Z",
+      "updatedAt": "2025-03-25T00:00:00.000Z"
+    },
+    {
+      "id": "3",
+      "title": "Morning jog",
+      "description": "Run for 30 minutes in the park",
+      "categoryId": "3",
+      "status": "Done",
+      "priority": "Low",
+      "dueDate": "2025-03-25T00:00:00.000Z",
+      "createdAt": "2025-03-25T00:00:00.000Z",
+      "updatedAt": "2025-03-25T00:00:00.000Z"
+    },
+    {
+      "id": "4",
+      "title": "Pay utility bills",
+      "description": "Pay electricity, water, and internet bills",
+      "categoryId": "4",
+      "status": "To Do",
+      "priority": "High",
+      "dueDate": "2025-04-02T00:00:00.000Z",
+      "createdAt": "2025-03-25T00:00:00.000Z",
+      "updatedAt": "2025-03-25T00:00:00.000Z"
+    },
+    {
+      "id": "5",
+      "title": "Team meeting",
+      "description": "Weekly sync with the development team",
+      "categoryId": "1",
+      "status": "To Do",
+      "priority": "Medium",
+      "dueDate": "2025-03-27T00:00:00.000Z",
+      "createdAt": "2025-03-25T00:00:00.000Z",
+      "updatedAt": "2025-03-25T00:00:00.000Z"
+    },
+    {
+      "id": "195d38d04f1-2cbd9e94-41bf-1f2e-0000c20b47d4",
+      "title": "Testing James",
+      "description": "Testing James\t",
+      "categoryId": "2",
+      "status": "In Progress",
+      "priority": "Medium",
+      "dueDate": "2025-03-31T17:43:00.000Z",
+      "createdAt": "2025-03-26T17:43:09.297Z",
+      "updatedAt": "2025-03-26T17:43:09.297Z"
+    },
+    {
+      "id": "195d629378e-390ac0b9-413c-1a44-000044e349f1",
+      "title": "TESTED ",
+      "description": "TESTED AGAIN",
+      "categoryId": "2",
+      "status": "In Progress",
+      "priority": "Medium",
+      "dueDate": "2025-03-31T05:52:00.000Z",
+      "createdAt": "2025-03-27T05:53:00.302Z",
+      "updatedAt": "2025-03-27T05:53:00.302Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Work",
+      "color": "#4285F4"
+    },
+    {
+      "id": "2",
+      "name": "Personal",
+      "color": "#EA4335"
+    },
+    {
+      "id": "3",
+      "name": "Health",
+      "color": "#34A853"
+    },
+    {
+      "id": "4",
+      "name": "Finance",
+      "color": "#FBBC05"
+    }
+  ]
+}
