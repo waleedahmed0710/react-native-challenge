@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { RootStack } from '../../types/types';
 import { NavigationContainer } from '@react-navigation/native';
