@@ -21,6 +21,8 @@
     "DEFINES_MODULE": "YES"
   },
   "dependencies": {
-    "RCT-Folly": []
+    "RCT-Folly": [
+
+    ]
   }
 }
