@@ -14,6 +14,7 @@ import { authService } from "@/src/services/auth.service";
 import ErrorBanner from "@/src/components/ErrorBanner";
 import { useRouter } from "expo-router";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useUserStore } from "@/src/store/userStore";
 
 const LoginScreen = () => {
   const router = useRouter();
@@ -21,6 +22,7 @@ const LoginScreen = () => {
   const [password, setPassword] = React.useState("");
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string[]>([]);
+  const { setUser, setToken } = useUserStore();
 
   const handleLogin = async () => {
     setLoading(true);
@@ -31,6 +33,9 @@ const LoginScreen = () => {
       if (response.success) {
         await AsyncStorage.setItem("token", response.token);
         await AsyncStorage.setItem("user", JSON.stringify(response.data));
+        // zustand
+        setUser(response.data);
+        setToken(response.token);
         router.replace("/(root)/(tabs)");
       } else {
         setError(["Login failed"]);

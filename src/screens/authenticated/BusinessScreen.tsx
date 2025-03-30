@@ -3,8 +3,8 @@ import React from "react";
 
 const BusinessScreen = () => {
   return (
-    <View>
-      <Text>BusinessScreen</Text>
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <Text>Not implemented</Text>
     </View>
   );
 };
