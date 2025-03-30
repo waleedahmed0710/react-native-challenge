@@ -2,6 +2,7 @@ import { View, Text, Image } from "react-native";
 import React from "react";
 import { Tabs } from "expo-router";
 import { Feather } from "@expo/vector-icons";
+import { colors } from "@/src/constants/colors";
 
 const CustomTabBarIcons = ({
   title,
@@ -14,7 +15,11 @@ const CustomTabBarIcons = ({
 }) => {
   return (
     <View style={{ alignItems: "center", justifyContent: "center", flex: 1 }}>
-      <Feather name={icon} size={28} color={focused ? "#14746f" : "#000"} />
+      <Feather
+        name={icon}
+        size={28}
+        color={focused ? colors.primary : "#000"}
+      />
     </View>
   );
 };

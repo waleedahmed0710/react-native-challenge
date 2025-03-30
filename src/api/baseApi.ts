@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'https://service-finder-api.appsprojectbook.com/';
+const BASE_URL = 'https://service-finder-api.appsprojectbook.com/api/v1';
 
 export const baseApi = axios.create({
     baseURL: BASE_URL,
