@@ -8,42 +8,73 @@ import { servicesService } from "@/src/services/services.service";
 import ServiceCard from "@/src/components/ServiceCard";
 import BusinessCard from "@/src/components/BusinessCard";
 import { router } from "expo-router";
+import { useNetworkStatus } from "@/src/hooks/useNetworkStatus";
 
 const HomeScreen = () => {
   const [user, setUser] = React.useState<UserData | null>(null);
   const [businesses, setBusinesses] = React.useState<BusinessData[]>([]);
   const [services, setServices] = React.useState<ServicesData[]>([]);
+  const { isConnected } = useNetworkStatus();
 
   React.useEffect(() => {
-    businessService
-      .getAllBusinesses()
-      .then((response) => {
-        if (response.success) {
-          setBusinesses(response.data);
-        } else {
-          console.error("Failed to fetch businesses");
-        }
-      })
-      .catch((error) => {
-        if (error.message.includes("token not found")) {
-          router.replace("/(root)/(auth)/login");
-        }
-      });
-    servicesService
-      .getAllServices()
-      .then((response) => {
-        if (response.success) {
-          setServices(response.data.slice(0, 10));
-        } else {
-          console.error("Failed to fetch businesses");
-        }
-      })
-      .catch((error) => {
-        console.error("Error fetching businesses:", error.message);
-        if (error.message.includes("token not found")) {
-          router.replace("/(root)/(auth)/login");
-        }
-      });
+    if (!isConnected) {
+      businessService
+        .getAllBusinesses()
+        .then(async (response) => {
+          if (response.success) {
+            setBusinesses(response.data.slice(0, 10));
+            await AsyncStorage.setItem(
+              "businesses-cached",
+              JSON.stringify(response.data.slice(0, 10))
+            );
+          } else {
+            console.error("Failed to fetch businesses");
+          }
+        })
+        .catch((error) => {
+          if (error.message.includes("token not found")) {
+            router.replace("/(root)/(auth)/login");
+          }
+        });
+      servicesService
+        .getAllServices()
+        .then(async (response) => {
+          if (response.success) {
+            setServices(response.data.slice(0, 10));
+            await AsyncStorage.setItem(
+              "services-cached",
+              JSON.stringify(response.data.slice(0, 10))
+            );
+          } else {
+            console.error("Failed to fetch businesses");
+          }
+        })
+        .catch((error) => {
+          console.error("Error fetching businesses:", error.message);
+          if (error.message.includes("token not found")) {
+            router.replace("/(root)/(auth)/login");
+          }
+        });
+    } else {
+      AsyncStorage.getItem("businesses-cached")
+        .then((value) => {
+          if (value !== null) {
+            setBusinesses(JSON.parse(value));
+          }
+        })
+        .catch((error) => {
+          console.error("Failed to fetch businesses", error);
+        });
+      AsyncStorage.getItem("services-cached")
+        .then((value) => {
+          if (value !== null) {
+            setServices(JSON.parse(value));
+          }
+        })
+        .catch((error) => {
+          console.error("Failed to fetch services", error);
+        });
+    }
 
     const getData = async () => {
       try {
