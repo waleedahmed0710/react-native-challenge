@@ -36,6 +36,34 @@ const TabsLayout = () => {
           ),
         }}
       />
+      <Tabs.Screen
+        name="business"
+        options={{
+          headerShown: false,
+          title: "",
+          tabBarIcon: ({ color, size, focused }) => (
+            <CustomTabBarIcons
+              focused={focused}
+              icon={"search"}
+              title="Search"
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          headerShown: false,
+          title: "",
+          tabBarIcon: ({ color, size, focused }) => (
+            <CustomTabBarIcons
+              focused={focused}
+              icon={"user"}
+              title="Profile"
+            />
+          ),
+        }}
+      />
     </Tabs>
   );
 };
