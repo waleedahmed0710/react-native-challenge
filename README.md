@@ -1,220 +1,142 @@
-# react-native-challenge
+# Service Mania App
 
-Below is a sample **README.md** for an **experienced React Native** coding challenge. This challenge targets **3+ years** of professional React Native experience, with an emphasis on more advanced functionality (state management, offline support, testing, etc.). Feel free to adjust the content and difficulty based on your specific needs.
+A mobile application built with Expo and React Native that allows users to browse and manage services.
 
----
+## Prerequisites
 
-# React Native Coding Challenge
+- [Node.js](https://nodejs.org/) (version 18 or later)
+- [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
+- [Expo CLI](https://docs.expo.dev/get-started/installation/)
+- iOS Simulator (for Mac users) or Android Emulator
 
-Welcome to our **Advanced React Native** coding challenge! We’ve designed this exercise for **senior-level React Native developers** with 3+ years of experience. This challenge will assess your ability to architect and implement complex features in a production-like environment, including:
+## Installation
 
-- Advanced state management
-- Data persistence/offline support
-- Navigation and UI structure
-- Testing and code quality
+1. Clone the repository:
 
-We value **clean code**, **scalability**, and **best practices**. You don’t need to polish every detail (e.g., pixel-perfect UI), but we’re looking for a thoughtfully structured solution that showcases how you’d approach a real-world scenario.
+```bash
+git clone
+cd into project folder
+```
 
----
+2. Install dependencies:
 
-## Table of Contents
+```bash
+npm install
+# or
+yarn install
+```
 
-1. [Overview](#overview)
-2. [Core Requirements](#core-requirements)
-3. [Optional Enhancements](#optional-enhancements)
-4. [Project Setup](#project-setup)
-5. [Testing](#testing)
-6. [Submission](#submission)
-7. [Evaluation Criteria](#evaluation-criteria)
-8. [Time Estimate](#time-estimate)
-9. [Tips & Guidance](#tips--guidance)
+## Running the App
 
----
+### Development Mode
 
-## Overview
+Start the Expo development server:
 
-You will build a **multi-screen React Native** app that:
+```bash
+npx expo start
+```
 
-1. **Fetches** data from an API (or mock server).
-2. **Displays** the data in a list (with some advanced UI/UX elements like pull-to-refresh or pagination).
-3. **Allows** creating/updating/deleting of items (if time permits).
-4. **Persists** data locally for offline usage.
-5. **Includes** a robust state management setup (Redux, MobX, React Context + Hooks, or your preferred solution).
+This will open the Expo Developer Tools in your browser. From here, you can:
 
-**Goal**: Demonstrate how you structure, organize, and implement a mid-size React Native application with real-world concerns like navigation, data flow, testing, and offline capabilities.
+- Press `i` to open in iOS Simulator (macOS only)
+- Press `a` to open in Android Emulator
+- Scan the QR code with your phone's camera to open in Expo Go app
 
----
+### Running on Physical Devices
 
-## Core Requirements
-
-1. **Data Source**
-
-   - Use either a real external API (e.g., [JSONPlaceholder](https://jsonplaceholder.typicode.com/)) or a local mock server (like [json-server](https://github.com/typicode/json-server)).
-   - The data can be anything—e.g., “Posts,” “Users,” or “Products.”
-
-2. **Multi-Screen Navigation**
-
-   - Implement at least **two screens** using a navigation solution such as [React Navigation](https://reactnavigation.org/).
-     - **Screen A**: Shows a list of items fetched from the API (with pagination or infinite scroll if desired).
-     - **Screen B**: Shows item details (e.g., a detail view or edit form).
-
-3. **Offline / Persistence**
-
-   - When the user has no internet, they should still see previously fetched data.
-   - You can use libraries like **Redux Persist**, **AsyncStorage**, or any other approach.
-
-4. **Advanced State Management**
-
-   - Use **Redux**, **MobX**, or **React Context + Hooks** in a scalable way.
-   - Structure your actions, reducers, or stores logically.
-
-5. **Create or Update an Item** (Optional but Recommended)
-
-   - Provide a form or UI that allows adding a new item or editing an existing one.
-   - Reflect changes both in local and remote data (if possible).
-
-6. **Error Handling**
-
-   - Show a user-friendly message if data fails to load or if the network request fails.
-
-7. **UI/UX**
-   - Don’t worry about perfect design, but ensure your screens are clear, consistent, and user-friendly.
-
----
-
-## Optional Enhancements
-
-Feel free to add any of the following **if time permits** and you want to showcase more advanced skills:
-
-1. **Testing**
-
-   - Write unit or integration tests using **React Native Testing Library**, **Jest**, or **Enzyme**.
-
-2. **Animations**
-
-   - Use React Native’s animation APIs (e.g., `Animated`) for transitions or user interaction.
-
-3. **Push Notifications** or **Deep Linking**
-
-   - Showcase advanced RN features.
-
-4. **Profile & Optimize**
-   - Identify any performance bottlenecks.
-   - Use techniques like memoization or lazy-loading.
-
----
-
-## Project Setup
-
-1. **Folder Structure**
-   - You can put everything under a single `react-native-advanced` folder in the repo.
-   - Example structure:
-     ```
-     react-native-advanced/
-       ├── src/
-       │   ├── components/
-       │   ├── screens/
-       │   ├── store/ (if using Redux or MobX)
-       │   ├── services/ (API calls)
-       │   └── ...
-       ├── App.js
-       ├── package.json
-       └── ...
-     ```
-2. **Dependencies**
-
-   - Use your preferred package manager (npm or yarn).
-   - The following libraries are recommended (but not mandatory if you have a different preference):
-     - React Navigation (for multi-screen flow)
-     - Redux or Context + Hooks (for state management)
-     - Redux Persist or AsyncStorage (for offline)
-
-3. **Running Your App**
-
-   - Include instructions in a local README or in your PR description (e.g., `npm install` then `npx react-native run-ios` / `run-android` or `npx expo start`).
-
-4. **Mock Server (Optional)**
-   - If you prefer to avoid external APIs, set up [json-server](https://github.com/typicode/json-server) locally.
-   - Provide instructions to start it (e.g., `npm run mock-server`).
-
----
+1. Download the Expo Go app on your iOS or Android device
+2. Scan the QR code displayed in the terminal or Expo Developer Tools
+3. Make sure your device is on the same network as your development machine
 
 ## Testing
 
-1. **Minimum**: Demonstrate basic coverage of your core logic (API calls, offline functionality, etc.).
-2. **React Native Testing Library**: Recommended for component testing.
-3. **Jest**: Can be used for unit testing your utilities, reducers, or other logic.
+The project uses Jest for testing. To run the tests:
 
-> **Tip**: Even just a few tests can demonstrate your knowledge of testing best practices.
+```bash
+npm test
+# or
+yarn test
+```
 
----
+### Running Specific Tests
 
-## Submission
+```bash
+npm test -- -t "ProfileScreen"
+# or
+yarn test -t "ProfileScreen"
+```
 
-1. **Fork** this repository and clone to your local machine.
-2. **Create a new branch** (e.g., `feature/advanced-rn-challenge`).
-3. **Implement** the requirements in the `react-native-advanced` folder.
-4. **Commit & Push** your code frequently with clear commit messages.
-5. **Open a Pull Request** (PR) into the main branch of this repo.
-6. **Include** in your PR description:
-   - How to run the app (installation, commands, etc.).
-   - Any assumptions or trade-offs you made.
-   - Any known issues or areas you’d like to improve if given more time.
+### Test Coverage
 
----
+To generate a test coverage report:
 
-## Evaluation Criteria
+```bash
+npm test -- --coverage
+# or
+yarn test --coverage
+```
 
-1. **Project & Code Structure**
+## Project Structure
 
-   - Is the app organized into logical folders (components, screens, store, etc.)?
-   - Are naming conventions and file organization clear?
+```
+service-mania/
+├── .expo/              # Expo configuration files
+├── assets/             # Images, fonts, and other static assets
+├── src/                # Source code
+│   ├── api/            # API configuration and base setup
+│   ├── components/     # Reusable components
+│   ├── constants/      # App constants including colors
+│   ├── screens/        # Application screens
+│   ├── services/       # API services
+│   ├── store/          # State management (Zustand)
+│   └── types/          # TypeScript type definitions
+├── __tests__/          # Test files
+├── App.tsx             # App entry point
+├── app.json            # Expo configuration
+└── package.json        # Dependencies and scripts
+```
 
-2. **Advanced State Management**
+## Building for Production
 
-   - Are you using Redux, MobX, or Context effectively?
-   - Is data flow easy to follow?
+To create a production build:
 
-3. **Offline & Persistence**
+```bash
+# For Android
+expo build:android
 
-   - Does the app handle offline scenarios gracefully?
-   - Is there a clear approach to caching or persisting data?
+# For iOS
+expo build:ios
+```
 
-4. **Data Fetching & Error Handling**
+Or using the newer EAS Build system:
 
-   - Are API calls abstracted or well-organized?
-   - Do you handle errors (e.g., network failures, invalid data) properly?
+```bash
+# Configure EAS
+npx eas-cli build:configure
 
-5. **User Experience**
+# Build for internal distribution
+npx eas-cli build --platform android --profile preview
+npx eas-cli build --platform ios --profile preview
+```
 
-   - Is navigation straightforward, and do screens render quickly?
-   - Is the list easily scrollable or paginated?
+## Troubleshooting
 
-6. **Testing**
+### Common Issues
 
-   - Do you cover critical logic or major components with unit/integration tests?
-   - Are tests meaningful and passing?
+**Metro Bundler issues:**
 
-7. **Overall Code Quality**
-   - Readability, maintainability, and adherence to best practices.
-   - Clean code, minimal repetition, and appropriate use of React Native/JS features.
+```bash
+npx expo start --clear
+```
 
----
+**Dependencies issues:**
 
-## Time Estimate
+```bash
+npm install --force
+# or
+yarn install --force
+```
 
-- This is a more **in-depth** challenge. We recommend spending **2-4 hours** on it, depending on your familiarity with the libraries.
-- If you have limited time, focus on **core features** (API fetch, offline, navigation, basic state management).
+**Testing AsyncStorage issues:**
 
----
-
-## Tips & Guidance
-
-- **Prioritize**: Implement core functionality well rather than trying to include every fancy feature.
-- **Document**: If you skip something or have a partial implementation, explain how you’d solve it or what you’d do with more time.
-- **Keep it Real**: Show how you code in a real-world scenario—commit often, structure logically, handle errors gracefully.
-- **Ask Questions**: If you feel any requirement is ambiguous, note your assumptions in the PR description.
-
----
-
-**Thank you for taking the time to complete this challenge.** We look forward to reviewing your submission and discussing it during the interview. Good luck!
+If you encounter AsyncStorage errors in tests, ensure you have the proper mocks set up in your test files or in a global setup file.
