@@ -1,9 +1,31 @@
-import { View, Text, FlatList, StyleSheet, Image } from "react-native";
-import React from "react";
+import {
+  View,
+  Text,
+  FlatList,
+  StyleSheet,
+  Image,
+  RefreshControl,
+} from "react-native";
+import React, { useState } from "react";
 import { ServicesData } from "../types";
 import { colors } from "../constants/colors";
-const BusinessCard = ({ services }: { services: ServicesData[] }) => {
-  //   console.log("Services", services);
+
+interface BusinessCardProps {
+  services: ServicesData[];
+  onRefresh?: () => Promise<void>;
+}
+
+const BusinessCard = ({ services, onRefresh }: BusinessCardProps) => {
+  const [refreshing, setRefreshing] = useState(false);
+
+  const handleRefresh = async () => {
+    if (onRefresh) {
+      setRefreshing(true);
+      await onRefresh();
+      setRefreshing(false);
+    }
+  };
+
   return (
     <View>
       <FlatList
@@ -62,8 +84,14 @@ const BusinessCard = ({ services }: { services: ServicesData[] }) => {
           </View>
         )}
         keyExtractor={(item) => item.id.toString()}
-        // horizontal
-        // showsHorizontalScrollIndicator={false}
+        refreshControl={
+          <RefreshControl
+            refreshing={refreshing}
+            onRefresh={handleRefresh}
+            colors={[colors.primary]}
+            tintColor={colors.primary}
+          />
+        }
       />
     </View>
   );
