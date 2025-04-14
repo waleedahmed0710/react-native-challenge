@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Nike Air Max 90",
+      "price": 149.99,
+      "image": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/skwgyqrbfzhu6uyeh0gg/air-max-90-mens-shoes-6n3vKB.png"
+    },
+    {
+      "id": 2,
+      "name": "Adidas Ultraboost",
+      "price": 179.99,
+      "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/4f7401f9094e4b3e9cb6ad6e013c2a0b_9366/ultraboost-1-0-shoes-white.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Puma RS-X",
+      "price": 129.99,
+      "image": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_280,h_280/global/390775/01/sv01/fnd/PNA/fmt/png/RS-X-Triple-Sneakers"
+    }
+  ]
+}
