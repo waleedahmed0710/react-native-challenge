@@ -1,0 +1,39 @@
+const BASE_URL = "https://jsonplaceholder.typicode.com";
+/**
+ * Makes a request to the API using the Fetch API.
+ *
+ * @param {string} path - The endpoint path to make the request to.
+ * @param {string} [method="GET"] - The HTTP method for the request (e.g., "GET", "POST", "PUT").
+ * @param {Record<string, any> | null} [body=null] - The body of the request, to be sent with methods like "POST" or "PUT". Defaults to `null`.
+ * @param {Record<string, string>} [headers={}] - Optional headers to be included in the request.
+ * @returns {Promise<{data: any, error: any}>} The response data or error from the request.
+ */
+export const clientRequest = async (
+  path: string,
+  method: string = "GET",
+  body: Record<string, any> | null = null,
+  headers = {}
+) => {
+  try {
+    const URL = `${BASE_URL}/${path}`;
+    const options:RequestInit = {
+      method,
+      headers: {
+        "Content-Type": "application/json",
+        ...headers,
+      },
+    };
+    if (body) {
+        options.body = JSON.stringify(body);
+    }
+    const response = await fetch(URL, options);
+    if (!response.ok){
+      const error = await response.json();
+      return {data: null, error};
+    }
+    const data = await response.json();
+    return {data, error: null};
+  } catch (error) {
+    return {data: null, error};
+  }
+};
