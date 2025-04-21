@@ -31,7 +31,6 @@ export default function Posts() {
   const { postsOffline, pagination, savedAt } = useSelector(
     (state: RootState) => state.posts
   );
-  console.log({pagination})
   useEffect(() => {
     const unsubscribe = NetInfo.addEventListener((state) => {
       setIsConnected(state.isConnected);
@@ -96,7 +95,6 @@ export default function Posts() {
         setTotalPage(Math.ceil(postsOffline.length / 10));
       }
     } catch (error) {
-      console.error(error);
       setErrorMessage("An unexpected error occurred. Please try again.");
     } finally {
       setLoading(false);
