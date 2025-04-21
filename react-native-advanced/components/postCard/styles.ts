@@ -16,20 +16,6 @@ export default StyleSheet.create({
     flex: 1,
     flexDirection: "row"
   },
-  avatar: {
-    backgroundColor: Colors.indigoDye,
-    padding: 5,
-    paddingLeft: 10,
-    paddingRight: 10,
-    borderRadius: 50,
-    fontSize: 18,
-    color: Colors.whiteSmoke
-  },
-  username: {
-    marginTop: 5,
-    fontSize: 18,
-    fontWeight: 600,
-  },
   body: {
     fontSize: 14
   },

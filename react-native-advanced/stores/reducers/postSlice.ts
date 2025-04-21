@@ -12,14 +12,14 @@ interface PostsState {
   pagination: {
     totalPages: number;
   };
-  isLoading: boolean;
+  savedAt?: string;
 }
 const initialState: PostsState = {
   postsOffline: [],
   pagination: {
     totalPages: 0,
   },
-  isLoading: false,
+  savedAt: ""
 };
 const postsSlice = createSlice({
   name: "postsOffline",
@@ -31,21 +31,24 @@ const postsSlice = createSlice({
       state.pagination = {
         totalPages: action.payload.totalPages,
       };
+      state.savedAt = new Date().toISOString();
     },
     appendPost: (state, action) => {
       state.postsOffline = [...state.postsOffline, ...action.payload.posts];
       state.pagination = {
         totalPages: action.payload.totalPages,
       };
+      state.savedAt = new Date().toISOString();
     },
-    resavePost: (state) => {
+    resetPost: (state) => {
       state.postsOffline = [];
       state.pagination = {
-        totalPages: 1,
+        totalPages: 0,
       };
+      state.savedAt
     },
   },
 });
 
-export const { savePost, appendPost, resavePost } = postsSlice.actions;
+export const { savePost, appendPost, resetPost } = postsSlice.actions;
 export default postsSlice.reducer;

@@ -44,5 +44,14 @@ export default StyleSheet.create({
     marginTop: 20,
     borderTopWidth: 1,
     borderTopColor: "#ccc"
+  },
+  notFoundContainer: {
+    alignItems: "center",
+    justifyContent: "center",
+    height: "100%"
+  },
+  notFoundHeader: {
+    fontSize: 30,
+    fontWeight: 600
   }
 });
