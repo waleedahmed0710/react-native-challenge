@@ -17,5 +17,9 @@ export default StyleSheet.create({
   text: {
     color: Colors.whiteSmoke,
     fontSize: 16,
-  }
+  },
+  disabled: {
+    backgroundColor: '#ccc',
+  },
+
 });

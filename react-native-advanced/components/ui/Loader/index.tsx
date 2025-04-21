@@ -1,4 +1,4 @@
-import { ActivityIndicator, StyleSheet, View } from "react-native";
+import { ActivityIndicator, View } from "react-native";
 import styles from "./styles";
 import { Colors } from "@/constants/colors";
 interface LoaderProps {

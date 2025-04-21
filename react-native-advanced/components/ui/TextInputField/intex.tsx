@@ -1,5 +1,4 @@
-import React from "react";
-import { TextInput, View, StyleSheet } from "react-native";
+import { TextInput} from "react-native";
 import styles from "./styles"; // Assuming styles are defined here
 
 interface TextInputFieldProps {
